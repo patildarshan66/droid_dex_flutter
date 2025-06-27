@@ -1,7 +1,10 @@
 name: droid_dex_flutter
 description: "A Flutter plugin for DroidDex — Blinkit’s Android performance profiling library. This plugin bridges your Flutter app with native Kotlin performance signals using MethodChannel and EventChannel."
 version: 1.0.0
+
+repository: https://github.com/patildarshan66/droid_dex_flutter
 homepage:
+
 license: MIT
 
 environment:
