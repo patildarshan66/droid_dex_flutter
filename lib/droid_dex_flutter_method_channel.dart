@@ -73,13 +73,15 @@ class MethodChannelDroidDexFlutter extends DroidDexFlutterPlatform {
         });
     return result;
   }
+
   /// Get Live performance level for a list of integer class IDs with Weight
   @override
   Future<Stream<int>> getWeightedPerformanceLevelLiveData(
     List<PerformanceClassWeightPair> performanceClassWeightPairList,
   ) async {
     return eventChannel.receiveBroadcastStream({
-      "performanceClassWeightPairList": performanceClassWeightPairList.map((e) => e.toMap()).toList(),
+      "performanceClassWeightPairList":
+          performanceClassWeightPairList.map((e) => e.toMap()).toList(),
       "type": "getWeightedPerformanceLevelLiveData",
     }).cast<int>();
   }

@@ -105,9 +105,7 @@ class DroidDexFlutter {
     List<PerformanceClassWeightPair> performanceClassWeightPairList,
   ) async {
     final performanceLevelData = await DroidDexFlutterPlatform.instance
-        .getWeightedPerformanceLevelLiveData(
-      performanceClassWeightPairList,
-        );
+        .getWeightedPerformanceLevelLiveData(performanceClassWeightPairList);
     return performanceLevelData.map(
       (level) => PerformanceLevel.fromLevel(level),
     );

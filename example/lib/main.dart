@@ -58,7 +58,9 @@ class _MyAppState extends State<MyApp> {
 
       final sLevel = await _droidDex.getPerformanceLevel(singleClass);
       final aLevel = await _droidDex
-          .getAveragePerformanceLevelOfMultiplePerformanceClasses(multipleClasses);
+          .getAveragePerformanceLevelOfMultiplePerformanceClasses(
+            multipleClasses,
+          );
       final wLevel = await _droidDex.getWeightedPerformanceLevel(weightedPairs);
 
       setState(() {
@@ -67,7 +69,9 @@ class _MyAppState extends State<MyApp> {
         weightedLevel = wLevel;
       });
 
-      final singleStream = await _droidDex.getPerformanceLevelLiveData(singleClass);
+      final singleStream = await _droidDex.getPerformanceLevelLiveData(
+        singleClass,
+      );
       final averageStream = await _droidDex
           .getAveragePLOfMultiplePerformanceClassesLiveData(multipleClasses);
       final weightedStream = await _droidDex

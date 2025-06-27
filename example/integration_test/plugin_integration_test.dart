@@ -6,7 +6,6 @@
 // For more information about Flutter integration tests, please see
 // https://flutter.dev/to/integration-testing
 
-
 import 'package:droid_dex_flutter/constants/performance_class.dart';
 import 'package:droid_dex_flutter/constants/performance_level.dart';
 import 'package:flutter_test/flutter_test.dart';
@@ -19,7 +18,9 @@ void main() {
 
   testWidgets('getPerformanceLevel test', (WidgetTester tester) async {
     final DroidDexFlutter plugin = DroidDexFlutter();
-    final PerformanceLevel level = await plugin.getPerformanceLevel(PerformanceClass.storage);
+    final PerformanceLevel level = await plugin.getPerformanceLevel(
+      PerformanceClass.storage,
+    );
     // The version string depends on the host platform running the test, so
     // just assert that some non-empty string is returned.
     expect(level, true);

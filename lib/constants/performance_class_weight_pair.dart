@@ -8,10 +8,7 @@ class PerformanceClassWeightPair {
   });
 
   Map<String, dynamic> toMap() {
-    return {
-      'class': performanceClass,
-      'weight': weight,
-    };
+    return {'class': performanceClass, 'weight': weight};
   }
 
   static PerformanceClassWeightPair fromMap(Map<String, dynamic> map) {
